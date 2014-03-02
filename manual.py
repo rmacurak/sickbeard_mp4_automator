@@ -170,7 +170,7 @@ def processFile(inputfile, tagdata):
             tagmp4.writeTags(output['output'])
         if settings.relocate_moov:
             converter.QTFS(output['output'])
-        if settings.copyto:
+        if settings.copyto or settings.moveto:
             converter.replicate(output['output'])
 
 
